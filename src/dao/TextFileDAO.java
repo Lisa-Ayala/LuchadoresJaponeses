@@ -24,7 +24,7 @@ public class TextFileDAO {
 			String line = re.readLine();
 			Luchador localFighter;
 			String localdata[];
-			group.setCantLuchadores(Integer.parseInt(line));
+			group.setCantLuchadores(Integer.parseInt(line)); 
 			for(int x=0; x<group.getCantLuchadores(); x++)
 			{
 				line=re.readLine();
@@ -34,7 +34,7 @@ public class TextFileDAO {
 				localFighter.setId(x);
 				localFighter.setPeso(Double.parseDouble(localdata[0]));
 				localFighter.setAltura(Double.parseDouble(localdata[1]));
-				group.getLuchadores().add(localFighter);
+				group.getLuchadores().add(localFighter); 
 				}
 			}
 			
@@ -55,12 +55,12 @@ public class TextFileDAO {
 	{
 		File file = new File("Sumo.out");
 		PrintWriter writer = null;
-		Iterator<Luchador> listaITLuchadores = group.getLuchadores().iterator();
+		Iterator<Luchador> listaITLuchadores = group.getLuchadores().iterator();/// iterador que recorre lista de luchadores
 		try {
 			writer = new PrintWriter(file);
 			while(listaITLuchadores.hasNext()){
 				writer.print(listaITLuchadores.next().getDomina()); 
-				writer.printf("\n");
+				writer.printf("\n");// porque printf y no print?
 			}	
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

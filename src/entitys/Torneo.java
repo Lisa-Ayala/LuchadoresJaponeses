@@ -10,10 +10,7 @@ public class Torneo {
 	{
 		luchadores=new ArrayList<Luchador>();
 	}
-	@Override
-	public String toString() {
-		return "Torneo [luchadores=" + luchadores + "]";
-	}
+	
 	public int getCantLuchadores() {
 		return cantLuchadores;
 	}

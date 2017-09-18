@@ -1,18 +1,15 @@
 package entitys;
 
 public class Luchador {
-	private long id;
+	private int id;
 	private double altura;
 	private double peso;
 	private int domina;
-	@Override
-	public String toString() {
-		return "Luchador [domina=" + domina + "]";
-	}
+
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public Double getAltura() {
